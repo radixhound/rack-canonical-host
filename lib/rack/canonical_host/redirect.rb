@@ -66,6 +66,10 @@ module Rack
       end
 
       def known?
+        puts "*" * 80
+        puts "canonical host result"
+        puts "*" * 80
+        puts "request host (#{request_uri.host}) == (#{host})?"
         host.nil? || request_uri.host == host
       end
 
